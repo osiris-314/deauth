@@ -1,4 +1,5 @@
 # Automated Deauthentication Attack
+Exit the script with Ctrl + z
 
 # !!! DISCLAIMER !!!
 
