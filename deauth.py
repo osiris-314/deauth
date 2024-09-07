@@ -45,6 +45,9 @@ def send_deauth(network_mac, device_macs, iface=None, count=0, file_name=None):
                 print(Fore.LIGHTBLUE_EX + f"\nDeauthenticating " + Fore.LIGHTGREEN_EX + 'all' + Fore.LIGHTBLUE_EX + ' devices on network ' + Fore.LIGHTGREEN_EX + str(network_mac) + Fore.LIGHTBLUE_EX + ' using interface ' + Fore.LIGHTYELLOW_EX + str(iface) + Fore.RESET)
             else:
                 print(Fore.LIGHTBLUE_EX + f"\nDeauthenticating " + Fore.LIGHTGREEN_EX + str(num_devices) + Fore.LIGHTBLUE_EX + ' device(s) on network ' + Fore.LIGHTGREEN_EX + str(network_mac) + Fore.LIGHTBLUE_EX + ' using interface ' + Fore.LIGHTYELLOW_EX + str(iface) + Fore.RESET)
+                print(Fore.LIGHTBLUE_EX + '\nTarget Devices:' + Fore.RESET)
+                for device_mac in device_macs:
+                    print(Fore.LIGHTGREEN_EX + '  - ' + str(device_mac) + Fore.RESET)
 
     # Create and send deauth packets
     packets = []
